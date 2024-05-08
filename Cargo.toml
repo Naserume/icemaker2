@@ -7,6 +7,9 @@ version = "0.1.0"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+# 여기가 rust dependency 적어두는 곳, 참조할 모듈들, 코드들은 여기 적어둔다.
+# rust에서 직접 접근 가능한 경우 버전과 옵션을 적어주지만, github 등에 있는 코드는 주소를 직접 접어줘야한다.
+# tree-sitter 
 [dependencies]
 chrono = {version = "0.4.31", default-features = false, features = ["alloc", "std", "clock"]}
 clap = {version = "4.0.4", features = ["derive"]}
@@ -25,9 +28,9 @@ serde = {version = "1.0", features = ["derive"]}
 serde_json = "1.0"
 sha2 = "0.10"
 tempdir = "0.3"
-tree-sitter = {git = "https://github.com/tree-sitter/tree-sitter"}
-tree-sitter-rust = {path = "../tree-sitter-rust"}
-tree-splicer = {path = "../tree-splicer/crates/tree-splicer"}
+tree-sitter = "0.20"
+tree-sitter-rust = "0.20"
+tree-splicer = "0.5.0"
 walkdir = "2.3.1"
 
 [profile.release]

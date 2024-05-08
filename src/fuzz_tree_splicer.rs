@@ -3,7 +3,7 @@ use std::path::{Path, PathBuf};
 use std::time::Instant;
 
 use rand::Rng;
-use tree_sitter::{Parser, Tree};
+use tree_sitter::{Parser, Tree}; // tree_sitter는 
 use tree_splicer::splice::{Config, Splicer};
 
 pub(crate) const IN_CODE_FP_KEYWORDS: &[&str] = &[
@@ -72,7 +72,7 @@ pub(crate) fn splice_file(path: &PathBuf) -> Vec<String> {
     let mut parser = Parser::new();
     parser.set_timeout_micros(10_000_000);
     // rust!
-    parser.set_language(&tree_sitter_rust::language()).unwrap();
+    parser.set_language(tree_sitter_rust::language()).unwrap();
 
     let tree = parser.parse(&file_content, None);
 
